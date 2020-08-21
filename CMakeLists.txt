@@ -31,7 +31,7 @@ target_link_libraries(test
   CONAN_PKG::catch2
   )
 
-if (EXISTS ${CMAKE_CURRENT_BINARY_DIR}/compile_commands.json)
+if (EXISTS "${CMAKE_CURRENT_BINARY_DIR}/compile_commands.json")
   add_custom_target(copy_compile_commands ALL
     DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/compile_commands.json)
   add_custom_command(
